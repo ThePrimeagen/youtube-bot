@@ -1,0 +1,12 @@
+{
+  "name": "youtube-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:michaelbpaulson/youtube-bot.git",
+  "author": "Michael Paulson <michael.b.paulson@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "tmi.js": "^1.4.2",
+    "ws": "^7.0.0"
+  }
+}
