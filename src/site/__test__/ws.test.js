@@ -1,4 +1,3 @@
-
 const WebSocket = require('ws');
 const config = require('../config');
 
