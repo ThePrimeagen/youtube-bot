@@ -5,8 +5,16 @@
   "repository": "git@github.com:michaelbpaulson/youtube-bot.git",
   "author": "Michael Paulson <michael.b.paulson@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack --debug"
+  },
   "dependencies": {
     "tmi.js": "^1.4.2",
     "ws": "^7.0.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.0.3",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.3"
   }
 }

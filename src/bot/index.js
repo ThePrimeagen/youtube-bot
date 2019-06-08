@@ -36,7 +36,22 @@ client.on('chat', function(channel, user, line, self) {
     }
 
     const youtubeLink = parts[1];
-    connections.forEach(ws => ws.send(youtubeLink));
+    const v_Idx = youtubeLink.indexOf('v=');
+    if (!youtubeLink || v_Idx === -1) {
+        return;
+    }
+
+    let id = youtubeLink;
+    if (~youtubeLink.indexOf('http')) {
+        // https://youtu.be/PFrOU4Ixy-w?t=57
+        id = youtubeLink.
+            split('?')[1].
+            split('&').
+            filter(k => ~k.indexOf('v='))[0].
+            substring(2);
+    }
+
+    connections.forEach(ws => ws.send(id));
 });
 
 const wss = new WebSocket.Server({
